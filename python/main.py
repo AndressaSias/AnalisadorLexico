@@ -1,10 +1,8 @@
 import re
 def verificaVariavel(variavel,cnt):
     if re.fullmatch("\d+\n", variavel):
-        print("[{}] INT".format(cnt, variavel.strip()))
         return "inteiro"
     elif re.fullmatch("\d+\.\d+\n", variavel):
-            print("[{}] FLOAT {}".format(cnt, variavel.strip()))
             return "real"
     elif re.fullmatch("(^[a-zA-Z])+[0-9]*?[a-zA-Z0-9]*\n", variavel):
             if variavel == "int\n":
@@ -60,7 +58,7 @@ with open(filepath) as fp:
        line = fp.readline()
        cnt += 1
 
+print("Tabela de Símbolos: {}".format(d.keys()))
 print("O programa possui erros nas linhas {}".format(erros))
-print("O programa possui erros nas linhas {}".format(d.keys()))
 
 
