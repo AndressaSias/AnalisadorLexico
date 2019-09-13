@@ -3,6 +3,10 @@ a
 int
 asd
 as123
+/ola
+/
+// ola2 ola0 3 54 rreeffe   
+// ola2 ola0 3 54 rreeff
 99
 99.
 99.99

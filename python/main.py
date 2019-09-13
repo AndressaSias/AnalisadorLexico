@@ -5,11 +5,16 @@ def verificaVariavel(variavel):
     else:
         if re.fullmatch("(^[a-zA-Z])+[0-9]*?[a-zA-Z0-9]*\n", variavel):
             print("ACHEI STRING {}".format(variavel.strip()))
+        else:
+            if re.fullmatch("[/]{2}[ ]*[a-zA-Z0-9\s]*\n", variavel):
+                 print("ACHEI STRING {}".format(variavel.strip()))
+                 return variavel
 filepath = 'file.txt'
 with open(filepath) as fp:
    line = fp.readline()
    cnt = 1
    while line:
-       verificaVariavel(line)
+       a = verificaVariavel(line)
+       
        line = fp.readline()
        cnt += 1
