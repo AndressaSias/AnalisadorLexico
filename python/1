@@ -42,7 +42,9 @@ with open(filepath) as fp:
            if line.strip() not in d.keys():
                d[line.strip()] = ident
                ident = ident + 1
-           print("[{}] IDENTIFICADOR {} {}".format(cnt, line.strip(), d[line.strip()]))
-       line = fp.readline()
+           
+           print("[{}] IDENTIFICADOR {} {}".format(cnt, line.strip(), d.keys[line.strip()]))
+
+      line = fp.readline()
        cnt += 1
 
